@@ -7,10 +7,10 @@ fileCount=$(getFileCount)
 guess="-1"
 loopCount=0
 
+echo "How many files do you think are in the current directory?"
 while [[ $guess -ne $fileCount ]]
 do
   let loopCount=$loopCount+1
-  echo "Enter a guess for the amount of files"
   echo -n "Guess $loopCount: "
   read guess
   if [[ $guess -gt $fileCount ]]; then
